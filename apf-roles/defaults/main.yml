@@ -1,0 +1,6 @@
+---
+# All variables with low-priority is written inside this playbook
+# These variables will be the one which will be overriden by the same variable-name's value
+
+# overrides environment variables
+environment_variable: Hello Environment

@@ -1,0 +1,10 @@
+---
+  - name: For including  another task from an external playbook
+    hosts: localhost
+    
+    tasks:
+      - name: including first task from another playbook
+        ansible.builtin.include_tasks: first.yml
+
+      - name: including second tack from another playbook
+        ansible.builtin.include_tasks: helloworld.yml    

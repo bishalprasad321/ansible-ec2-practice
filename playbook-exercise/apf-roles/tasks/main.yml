@@ -1,0 +1,18 @@
+---
+#- name: Exercise with GE assert modules
+#  hosts: localhost
+#  tasks: 
+- name: Get the configuration file
+  command: cat /home/ubuntu/file.txt
+  register: result
+
+- name: Ensure valid environment
+  ansible.builtin.assert:
+    that: 
+      - "'ansible: configuration management' in result.stdout_lines"
+    success_msg: "Yes, the value is defined"
+    fail_msg: "No, there is some issue"
+
+- name: Print the register variable output
+  ansible.builtin.debug:
+    var: result

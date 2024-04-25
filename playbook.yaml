@@ -1,0 +1,5 @@
+---
+# This playbook is for running the apf-role and checking the exisistence of these variables
+- hosts: localhost
+  roles:
+    - apf-roles

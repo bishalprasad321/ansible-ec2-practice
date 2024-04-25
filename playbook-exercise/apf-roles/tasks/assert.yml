@@ -1,0 +1,16 @@
+---
+- name: Defining a variable 
+  ansible.builtin.set_fact:
+    fruit_name: "Pomogranate"
+
+- name: Check if a variable is defined
+  ansible.builtin.assert:  
+    that: fruit_name is defined
+    fail_msg: "The variable 'fruit_name' is not defined."
+    success_msg: "The variable 'fruit_name' is defined."
+
+- name: Check if a variable has a specific value
+  ansible.builtin.assert:
+    that: fruit_name == 'Pomogranate'
+    fail_msg: "The variable 'fruit_name' does not have the expected value."
+    success_msg: "The variable 'fruit_name' has the expected value."

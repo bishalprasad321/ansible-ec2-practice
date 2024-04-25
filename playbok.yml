@@ -1,0 +1,6 @@
+---
+- name: Including tasks from roles
+  hosts: localhost
+  tasks:
+    - name: Include role module
+      ansible.builtin.include_role

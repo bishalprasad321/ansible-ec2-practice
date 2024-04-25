@@ -1,0 +1,8 @@
+---
+- name: Example playbook with include_roles and tasks module
+  hosts: localhost
+  tasks: 
+    - name: Running tasks from role
+      ansible.builtin.include_role:
+        name: apf-roles
+        tasks_from: assert
