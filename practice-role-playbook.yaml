@@ -1,0 +1,4 @@
+- name: Testing the playbook for checking version of python via practice-roles
+  hosts: localhost
+  roles:
+    - practice-roles
