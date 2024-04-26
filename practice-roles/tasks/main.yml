@@ -1,0 +1,7 @@
+---
+# tasks file for practice-roles
+- name: Check the version of python installed
+  shell: python3 --version
+  register: result
+
+- debug: var=result
